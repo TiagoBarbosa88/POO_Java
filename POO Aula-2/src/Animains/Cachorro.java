@@ -1,30 +1,28 @@
 package Animains;
 
-public class Cachorro {
+public class Cachorro extends Animal{
 // Atributos
 
    static int numeroDeCachorros;
-   private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
-    private int tamanhoDoRabo;
-    private String estadoDeEspirito;
 
-// Construtor padrão
-    public Cachorro(){}
+    private int tamanhoDoRabo;
+
+    public Cachorro(String nome, String cor, int altura, double peso, String estadoDeEspirito) {
+        super(nome, cor, altura, peso, estadoDeEspirito);
+    }
+
 
 // Construtor adicionados
-    public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
-        this.nome = nome;
-        this.cor = cor;
-        this.altura = altura;
-        this.peso = peso;
-        this.tamanhoDoRabo = tamanhoDoRabo;
-        this.estadoDeEspirito = estadoDeEspirito;
-
-        numeroDeCachorros ++;
-    }
+//    public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
+//        this.nome = nome;
+//        this.cor = cor;
+//        this.altura = altura;
+//        this.peso = peso;
+//        this.tamanhoDoRabo = tamanhoDoRabo;
+//        this.estadoDeEspirito = estadoDeEspirito;
+//
+//        numeroDeCachorros ++;
+//    }
 
     // Metodos
 
@@ -76,17 +74,11 @@ public class Cachorro {
         return tamanhoDoRabo;
     }
 
-    public String getEstadoDeEspirito() {
-        return estadoDeEspirito;
-    }
+//    public String getEstadoDeEspirito() {
+//        return estadoDeEspirito;
+//    }
 
 
-
-    private void comer(){}
-
-    public void latir(){
-        System.out.println("Au Au");
-    }
 
     public String pegar(){
         return "pegou a bolinha";
@@ -116,5 +108,10 @@ public class Cachorro {
         return "Cachorro{" +
                 "nome='" + nome + '\'' +
                 '}';
+    }
+
+    @Override
+    public void soar() {
+        System.out.println("Au Au");;
     }
 }
