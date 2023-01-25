@@ -1,20 +1,34 @@
+import Animains.Animal;
 import Animains.Cachorro;
 import Animains.Gato;
 import Animains.Passaro;
+import Lojas.PetShop;
 
 public class Main {
     public static void main(String[] args) {
 
         Cachorro cachorro1 = new Cachorro("Tito","Branco", 10, 7.5, "nada");
-
         Gato gato1 = new Gato("Felix", "preto", 25,3.5, "nada" );
-
         Passaro passaro1 = new Passaro("Frajola", "marrom", 30, 2.5, "nada");
 
-        cachorro1.soar();
-        gato1.soar();
-        passaro1.soar();
+        System.out.println("------------------------------");
 
+
+       PetShop petShop = new PetShop();
+
+        petShop.tosar(cachorro1);
+        System.out.println(cachorro1.getNome() +" está "  + cachorro1.getEstadoDeEspirito());
+
+        petShop.darBanho(cachorro1);
+        System.out.println(cachorro1.getNome() +" está "  + cachorro1.getEstadoDeEspirito());
+
+        petShop.darBanho(gato1);
+        System.out.println(gato1.getNome() +" está "  +  gato1.getEstadoDeEspirito());
+
+       petShop.deixarNoHotel(passaro1);
+        System.out.println(passaro1.getNome() + " está " + passaro1.getEstadoDeEspirito());
+
+        gato1.soar();
 
 
 
@@ -28,7 +42,7 @@ public class Main {
 //        System.out.println(cachorro2.toString());
 //        System.out.println(cachorro3.toString());
 
-        System.out.println("------------------------------");
+
 
 //        System.out.println("O cachorro está " + cachorro1.interagir("carinho"));
 //        System.out.println("O cachorro está " + cachorro1.interagir("pisar na patinha"));
