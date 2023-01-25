@@ -13,7 +13,6 @@ public class Main {
 
         System.out.println("------------------------------");
 
-
        PetShop petShop = new PetShop();
 
         petShop.tosar(cachorro1);
@@ -30,24 +29,29 @@ public class Main {
 
         gato1.soar();
 
-
-
 //        cachorro1.setNome("Rex");
 //        cachorro1.setCor("marrom");
 //        cachorro1.setPeso(7.5);
 //        cachorro1.setAltura(25);
 //        cachorro1.setTamanhoDoRabo(5);
 
-
 //        System.out.println(cachorro2.toString());
 //        System.out.println(cachorro3.toString());
-
-
 
 //        System.out.println("O cachorro está " + cachorro1.interagir("carinho"));
 //        System.out.println("O cachorro está " + cachorro1.interagir("pisar na patinha"));
 //        System.out.println("O cachorro está " + cachorro1.interagir("vai dormir"));
 //        System.out.println("O cachorro está " + cachorro1.interagir("nada"));
 
+        // Casting transforma uma variavel
+        double d = 5.5d;
+        float f = 3.0f;
+
+        float x = f + (float)d;
+        System.out.println(x);
+
+        // underline ajuda
+        int a = 23_132_157;
+        System.out.println(a);
     }
 }
